@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+    <title>Tip Calculator</title>
+</head>
+<body>
+	
+	<h1>Tip Calculator</h1>
+	
+	<main>		
+		<section id="section1">
+			
+			<h2>Tip Calculator</h2>
+			
+			<form id="tipcalculator">
+				<fieldset>
+
+					<label for="preTaxTotal">pre-tax total: $</label>
+					<input type="number" id="preTaxTotal" name="preTaxTotal" value="0" step="1" required>
+					<br>
+					<label for="dinerNub"># of diners</label>			
+					<input type="range" name="dinerNub" id="dinerNub" value="0" step="1" min="2" max="10" required>
+					<p id="dinerDisplay">0</p>
+					
+					<h3>gratuity</h3>
+					<div id="radio">					
+						<label for="15">15%</label>
+						<input type="radio" name="tip" id="value15" value="15">
+						<label for="20">20%</label>
+						<input type="radio" name="tip" id="value20" value="20">
+						<label for="25">25%</label>
+						<input type="radio" name="tip" id="value25" value="25">
+						<label for="30">30%</label>
+						<input type="radio" name="tip" id="value30" value="30">
+						<label for="35">35%</label>
+						<input type="radio" name="tip" id="value35" value="35">
+						<label for="40">40%</label>
+						<input type="radio" name="tip" id="value40" value="40">
+					</div>
+
+					<label for="taxRate">tax rate</label>
+					<select name="taxRate" id="taxRate">
+						<option value="0">-- Select --</option>
+						<option value="5">Alberta</option>
+						<option value="12">British Columbia</option>
+						<option value="12">Manitoba</option>
+						<option value="15">New Brunswick</option>
+						<option value="15">Newfoundland and Labrador</option>
+						<option value="5">Northwest Territories</option>
+						<option value="15">Nova Scotia</option>
+						<option value="5">Nunavut</option>
+						<option value="13">Ontario</option>
+						<option value="15">Prince Edward Island</option>
+						<option value="15">Quebec</option>
+						<option value="11">Saskatchewan</option>
+						<option value="5">Yukon</option>
+					</select>
+
+				</fieldset>
+			</form>
+		</section>
+		
+		<section id="section2">
+			
+			<h2>Total</h2>
+			 
+			<ul id="receipt">
+				<li id="receipt_preTaxTotal">pre-tax total: 0.00</li>
+				<li id="receipt_diners">diners: 0</li>
+				<li id="receipt_totalTip">total tip: $ 0.00</li>
+				<li id="receipt_totalTax">total tax: $ 0.00</li>
+				<li id="receipt_totalBill">total bill : $ 0.00</li>
+				<li id="receipt_totalPerDiner">total per diner: $ 0.00</li>
+			</ul>
+		</section>
+	</main>
+	
+	<script src="function.js"></script>
+</body>
+</html>
